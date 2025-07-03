@@ -40,7 +40,7 @@ public class UserServiceImplementation implements UserService{
 			//valid credentials
 			if(webPassword.equals(dbPassword)) {
 				String role = u.getRole();
-				if(role.equals("admin"))
+				if(role.equalsIgnoreCase("admin"))
 					return "admin";
 				else
 					return "customer";
