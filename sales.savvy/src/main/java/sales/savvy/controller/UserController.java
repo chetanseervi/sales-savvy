@@ -22,7 +22,7 @@ public class UserController {
 		//System.out.println(user);
 
 		String username = user.getUsername();
-		User u = service.getUser(username);
+		User u = service.getUser(username).orElse(null);
 
 		if (u != null) {
 			return "fail";
